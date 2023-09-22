@@ -1,8 +1,11 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express from 'express';
 import { KittyController } from './controllers/kitty.controler';
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
+
+app.use(cors())
 
 const kittyController = new KittyController()
 
