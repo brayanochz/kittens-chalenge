@@ -9,11 +9,17 @@ export class KittyService {
     }
 
     find = (): Kitty[] => {
-        return this.kitties;
+        return this.kitties.map((kitty) => this.setImageUrl(kitty));
     }
 
     findById = (id: number): Kitty => {
-        return this.kitties.find(kitty => kitty.id === id);
+        const kitty = this.kitties.find(kitty => kitty.id === id);
+        return this.setImageUrl(kitty)
+    }
+
+    setImageUrl = (kitty: Kitty) => {
+        kitty.imageFileName = `http://localhost:3000/images/${kitty.imageFileName}`;
+        return kitty
     }
 
 }

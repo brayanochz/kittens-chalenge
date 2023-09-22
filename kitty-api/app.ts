@@ -7,6 +7,8 @@ const port = 3000;
 
 app.use(cors())
 
+app.use('/images', express.static('images'))
+
 const kittyController = new KittyController()
 
 app.use('/kitty', kittyController.routes());
