@@ -1,12 +1,17 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
 
 function App() {
 
   return (
     <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </>
   )
 }

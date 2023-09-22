@@ -6,11 +6,23 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import KittyList from './view/KittyList.tsx';
+import KittyDetails from './view/KittyDetails.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <KittyList />,
+      },
+      {
+        path: "/:id",
+        element: <KittyDetails />
+      }
+    ]
   },
 ]);
 
