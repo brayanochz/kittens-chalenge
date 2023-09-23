@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useKittens } from '../../hooks/useKittens';
 import Card from '../../components/card/Card';
+import './index.css';
 
 const KittyList = () => {
 
