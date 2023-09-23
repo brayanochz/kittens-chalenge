@@ -10,4 +10,7 @@ body {
 
 main {
     max-width: 1366px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }

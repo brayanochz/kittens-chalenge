@@ -1,7 +1,5 @@
 .list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
 }
 
 /* media query for mobile */
@@ -21,6 +19,6 @@
 /* media query for desktop */
 @media (min-width: 1024px) {
     .list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }

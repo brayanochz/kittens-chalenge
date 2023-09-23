@@ -11,7 +11,7 @@ interface props {
 const Card: React.FC<props> = ({ kitty }) => {
     return (
         <Link className="card-link" to={`/${kitty?.id}`} >
-            <section className={'card'}>
+            <article className={'card'}>
                 {!kitty ? (
                     <p>No kitty!</p>
                 ) : (
@@ -26,7 +26,7 @@ const Card: React.FC<props> = ({ kitty }) => {
                         </span>
                     </>
                 )}
-            </section>
+            </article>
         </Link>
     );
 };
