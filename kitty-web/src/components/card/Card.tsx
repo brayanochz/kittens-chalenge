@@ -21,7 +21,9 @@ const Card: React.FC<props> = ({ kitty }) => {
                             <p className="card-name">{kitty.name}</p>
                             <span className="card-age">{kitty.age}</span>
                         </div>
-                        <span className="card-gender">{kitty.gender}</span>
+                        <span className="card-gender">
+                            <img src={`/${kitty.gender}-cat.png`} />
+                        </span>
                     </>
                 )}
             </section>
