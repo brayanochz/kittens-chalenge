@@ -11,7 +11,7 @@ app.use('/images', express.static('images'))
 
 const kittyController = new KittyController()
 
-app.use('/kitty', kittyController.routes());
+app.use('/kittens', kittyController.routes());
 
 app.get('/k', kittyController.getKitties)
 

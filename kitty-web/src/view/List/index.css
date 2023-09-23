@@ -1,5 +1,6 @@
 .list {
     display: grid;
+    gap: 10px;
 }
 
 /* media query for mobile */

@@ -9,13 +9,13 @@ export const useKittens = () => {
     const { get } = useApi()
 
     const getKittens = async () => {
-        const kittens = await get<Kitty[]>('/kitty')
+        const kittens = await get<Kitty[]>('/kittens')
         console.log(kittens)
         setKittens(kittens)
     }
 
     const getKitty = async (id: number) => {
-        const kitty = await get<Kitty>(`/kitty/${id}`)
+        const kitty = await get<Kitty>(`/kittens/${id}`)
         console.log(kitty)
         setKitty(kitty)
     }

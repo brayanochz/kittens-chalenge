@@ -1,7 +1,14 @@
+@keyframes cta-shaking {
+    0%   {transform: rotate(0deg);}
+    25%   {transform: rotate(15deg);}
+    50%   {transform: rotate(-15deg);}
+    75% {transform: rotate(0deg);}
+  }
+
 .card {
     border-radius: 15px;
     margin: 10px;
-    width: 300px;
+    width: 250px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -53,6 +60,10 @@
 
 .card-gender img {
     height: 30px;
+}
+
+.card-gender img:hover {
+    animation: cta-shaking 1s linear 0s;
 }
 
 .card-link {
