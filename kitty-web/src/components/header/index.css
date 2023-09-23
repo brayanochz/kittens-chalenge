@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px transparent;
+}
+
+.header a:hover {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid rgb(55, 192, 255);
+}
+
+.header li {
+    list-style: none;
+}
