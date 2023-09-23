@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useKittens } from '../hooks/useKittens';
+import { useKittens } from '../../hooks/useKittens';
 
 const KittyDetails = () => {
 
@@ -18,6 +18,7 @@ const KittyDetails = () => {
             {
                 kitty ? (
                     <div>
+                        <img src={kitty.imageFileName} />
                         <p>{kitty.name}</p>
                         <p>{kitty.age}</p>
                     </div>

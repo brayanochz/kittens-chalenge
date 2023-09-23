@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useKittens } from '../hooks/useKittens';
-import { Link } from 'react-router-dom';
+import { useKittens } from '../../hooks/useKittens';
+import Card from '../../components/card/Card';
 
 const KittyList = () => {
 
@@ -14,13 +14,11 @@ const KittyList = () => {
     return kittens.length <= 0 ? (
         <p>No kittens</p>
     ) : (
-        <ul>
-            {kittens.map((kitten) => (
-                <li>
-                    <Link to={`/${kitten.id}`} key={kitten.id}>{kitten.name}</Link>
-                </li>
+        <section className='list'>
+            {kittens.map((kitty) => (
+                <Card kitty={kitty} />
             ))}
-        </ul>
+        </section>
     );
 };
 

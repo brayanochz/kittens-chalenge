@@ -6,8 +6,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import KittyList from './view/KittyList.tsx';
-import KittyDetails from './view/KittyDetails.tsx';
+import KittyList from './view/List/KittyList.tsx';
+import KittyDetails from './view/Detail/KittyDetails.tsx';
 
 const router = createBrowserRouter([
   {
