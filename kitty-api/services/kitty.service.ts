@@ -17,9 +17,9 @@ export class KittyService {
         return this.setImageUrl(kitty)
     }
 
-    setImageUrl = (kitty: Kitty) => {
-        kitty.imageFileName = `http://localhost:3000/images/${kitty.imageFileName}`;
-        return kitty
+    setImageUrl = (kitty: Kitty): Kitty => {
+        const imageUrl = `http://localhost:3000/images/${kitty.imageFileName}`;
+        return { ...kitty, imageFileName: imageUrl }
     }
 
 }
