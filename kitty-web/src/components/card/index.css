@@ -17,6 +17,7 @@
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    border: 2px solid #eee;
 }
 
 

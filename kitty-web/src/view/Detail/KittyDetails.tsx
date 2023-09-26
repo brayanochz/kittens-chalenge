@@ -10,24 +10,29 @@ const KittyDetails = () => {
     useEffect(() => {
         if (!id) return
         getKitty(Number(id))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[id])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [id])
 
     return (
-        <div>
+        <main>
             {
                 kitty ? (
-                    <div>
-                        <img src={kitty.imageFileName} />
-                        <p>{kitty.name}</p>
-                        <p>{kitty.age}</p>
-                    </div>
+                    <>
+                        <div className='kitty-image'>
+                            <img src={kitty.imageFileName} />
+                        </div>
+                        <div>
+                            <p>{kitty.name}</p>
+                            <p>{kitty.age}</p>
+                            <p>{kitty.description}</p>
+                            <p>{kitty.gender}</p>
+                        </div>
+                    </>
                 ) : (
-                    <p>No kitty</p>
+                    <p>No kitty found</p>
                 )
             }
-            <p>Details {id}</p>
-        </div>
+        </main>
     );
 };
 
